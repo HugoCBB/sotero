@@ -1,0 +1,65 @@
+{
+  "database_url": "postgres://sotero:sotero@localhost:5432/sotero?sslmode=disable",
+  "user_agent": "sotero-radar/0.1 (+contato@exemplo.com)",
+  "workers": 16,
+  "poll_every": "5s",
+  "lease": "5m",
+  "max_attempts": 5,
+  "http_timeout": "20s",
+  "per_host_every": "2s",
+  "max_page_bytes": 5242880,
+  "rss": [
+    {
+      "name": "bbc-business",
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+      "every": "5m"
+    },
+    {
+      "name": "tomshardware",
+      "url": "https://www.tomshardware.com/feeds/all",
+      "every": "10m"
+    }
+  ],
+  "gdelt": {
+    "enabled": true,
+    "every": "5m",
+    "orgs": [
+      "nvidia",
+      "taiwan semiconductor",
+      "tsmc",
+      "asml",
+      "sk hynix",
+      "micron technology",
+      "samsung electronics",
+      "advanced micro devices",
+      "intel",
+      "foxconn",
+      "hon hai",
+      "quanta computer",
+      "wistron",
+      "ibiden",
+      "unimicron",
+      "coherent",
+      "innolight",
+      "vertiv",
+      "delta electronics",
+      "microsoft",
+      "meta platforms",
+      "alphabet",
+      "amazon",
+      "oracle",
+      "coreweave",
+      "apple"
+    ]
+  },
+  "classify": {
+    "enabled": true,
+    "workers": 1,
+    "ollama_url": "http://localhost:11434",
+    "model": "qwen2.5:3b",
+    "timeout": "3m"
+  },
+  "web": {
+    "addr": ":8080"
+  }
+}
